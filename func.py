@@ -1,3 +1,4 @@
+from os import killpg
 from unittest import result
 
 
@@ -22,6 +23,15 @@ def sum_many(*args):
 
 
 print(sum_many(1, 2, 3))
+
+
+def print_kwards(**kwargs):
+    for k in kwargs.keys():
+        if(k == "name"):
+            print("당신의 이름은 : " + kwargs[k])
+
+
+print(print_kwards(name="이서용"))
 
 
 def sum_and_mul(a, b):
